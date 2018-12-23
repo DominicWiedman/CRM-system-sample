@@ -1,0 +1,26 @@
+{
+  "name": "crm-system-sample",
+  "version": "1.0.0",
+  "description": "Sample CRM System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominicWiedman/CRM-system-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DominicWiedman/CRM-system-sample/issues"
+  },
+  "homepage": "https://github.com/DominicWiedman/CRM-system-sample#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
