@@ -1,4 +1,4 @@
 module.exports = {
-    mongoURI: 'mongodb://dbserver:port/dbname',
-    jwt: 'it_is_jwt_key'
+    mongoURI: 'mongodb://dom:dwiedman123@ds026558.mlab.com:26558/crm',
+    jwt: 'my-jwt-key'
 };
