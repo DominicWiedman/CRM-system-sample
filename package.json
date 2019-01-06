@@ -1,6 +1,6 @@
 {
   "name": "crm-system-sample",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sample CRM System",
   "main": "server.js",
   "scripts": {
