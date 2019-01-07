@@ -11,6 +11,8 @@ import {HistoryPageComponent} from "./history-page/history-page.component";
 import {OrderPageComponent} from "./order-page/order-page.component";
 import {CategoriesPageComponent} from "./categories-page/categories-page.component";
 import {CategoriesFormComponent} from "./categories-page/categories-form/categories-form.component";
+import {OrderCategoriesComponent} from "./order-page/order-categories/order-categories.component";
+import {OrderPositionsComponent} from "./order-page/order-positions/order-positions.component";
 
 const routes: Routes = [
   {
@@ -22,13 +24,16 @@ const routes: Routes = [
   },
   {
     path: '', component: SiteLayoutComponent, canActivate: [AuthGuard], children: [
-      {path:'overview', component: OverviewPageComponent},
-      {path:'analytics', component: AnalyticsPageComponent},
-      {path:'history', component: HistoryPageComponent},
-      {path:'order', component: OrderPageComponent},
-      {path:'categories', component: CategoriesPageComponent},
-      {path:'categories/new', component: CategoriesFormComponent},
-      {path:'categories/:id', component: CategoriesFormComponent},
+      {path:'overview', component: OverviewPageComponent, data: { title: 'Обзор'}},
+      {path:'analytics', component: AnalyticsPageComponent, data: { title: 'Аналитика'}},
+      {path:'history', component: HistoryPageComponent, data: { title: 'История'}},
+      {path:'order', component: OrderPageComponent, children: [
+          {path:'', component: OrderCategoriesComponent, data: { title: 'Добавить заказ'}},
+          {path:':id', component: OrderPositionsComponent, data: { title: ''}},
+        ]},
+      {path:'categories', component: CategoriesPageComponent, data: { title: 'Категории'}},
+      {path:'categories/new', component: CategoriesFormComponent, data: { title: 'Добавить категорию'}},
+      {path:'categories/:id', component: CategoriesFormComponent, data: { title: 'Редактировать категорию'}},
     ]
   }
 ];
