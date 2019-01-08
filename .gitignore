@@ -2,3 +2,4 @@
 /.idea
 /uploads/
 /npm-debug.log
+/config/keys.dev.js
